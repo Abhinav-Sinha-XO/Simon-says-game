@@ -20,6 +20,10 @@ A modern take on the classic memory skill game where you follow and reproduce in
 - Game over screen with final score
 - Responsive design
 
+## 🔗 Live Demo
+
+Try the game: [Simon Says Game](https://simon-says-game-blond.vercel.app)
+
 ## 🛠️ Technologies Used
 
 - HTML5
@@ -60,4 +64,3 @@ Each level adds one more random color to the sequence, which the player must rem
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
