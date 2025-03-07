@@ -38,6 +38,7 @@ function userFlash(btn) {
 }
 
 function levelUp() {
+  userSeq = []
   level++
   h2.innerText = `Level ${level}`
 
@@ -57,10 +58,15 @@ function checkAns(idx) {
 
   if (userSeq[idx] === gameSeq[idx]) {
     if (userSeq.length == gameSeq.length) {
-      setTimeout(levelUp, 1000)
+      setTimeout(levelUp, 800)
     }
   } else {
-    h2.innerText = "GAME OVER! Press any key to start."
+    h2.innerHTML = `GAME OVER! Your score was <b>${level}</br> <br> Press any key to start.`
+    document.querySelector("body").style.backgroundColor = "red";
+    setTimeout(function () {
+      document.querySelector("body").style.backgroundColor = "white"
+    }, 1000)
+    reset()
   }
 }
 function btnPress() {
@@ -76,4 +82,12 @@ function btnPress() {
 let allbtns = document.querySelectorAll(".btn")
 for (btn of allbtns) {
   btn.addEventListener("click", btnPress)
+}
+
+function reset() {
+  started = false
+  gameSeq = []
+  userSeq = []
+  level = 0
+
 }
